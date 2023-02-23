@@ -11,7 +11,7 @@
                     <p class="card-text">Capacity: <%=data.capacity%></p>
                     <p class="card-text">Price: <%=data.price%></p>
                     <p class="card-text">Category: <%=data.category%></p>
-                    <p class="card-text">Available: <%=data.available%></p>
+                    <p class="card-text">Available: <%= data.available == true ? 'Yes' : 'No' %></p>
                 </div>
             </div>
         </div>

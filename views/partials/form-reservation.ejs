@@ -12,12 +12,13 @@
                 <p class="card-text">Capacity: <%=items.capacity%></p>
                 <p class="card-text">Price: <%=items.price%></p>
                 <p class="card-text">Category: <%=items.category%></p>
-                <p class="card-text">Available: <%=items.available%></p>
+                <% let availability = items.available == true ? 'Yes' : 'No' %>
+                <p class="card-text">Available: <%=availability%></p>
                 <p class="card-text">Room Id: <%=items._id%></p>
             </div>
             <button class="btn btn-success" id=<%=items._id%> onclick="myFunction('<%=items._id%>',
                  '<%=items.roomName%>', '<%=items.capacity%>', '<%=items.price%>', 
-                 '<%=items.category%>', '<%=items.available%>')">Select</button>
+                 '<%=items.category%>', '<%=availability%>')">Select</button>
         </div>
     <%}%>
 </div>

@@ -39,7 +39,7 @@ mongoose.connect(process.env.DB_CONNECT, ()=>{
     });
 
 //checking server
-const port = 8000;
-app.listen(port,()=>{
-    console.log(`The server is running in port ${port}`);
+// const port = 8000;
+const server = app.listen(process.env.PORT || ++process.env.PORT || 0,()=>{
+    console.log(`The server is running in port ${server.address().port}`);
 });
